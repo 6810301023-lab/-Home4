@@ -1,0 +1,8 @@
+{
+  "solution": {
+    "path": "FileProcessing.sln",
+    "projects": [
+      "FileProcessing.csproj"
+    ]
+  }
+}

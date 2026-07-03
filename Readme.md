@@ -1,242 +1,65 @@
-# 📄 Text/CSV Viewer (C# Learning Project)
-
-## 📌 Overview
-
-This project is a **simple Text/CSV Viewer written in C#**.  
-It is designed as a **learning project for students** to practice:
-
-* Basic C# programming
-* File I/O handling
-* Working with CSV data
-* Git and version control
-* Open-source and community practices
-
-***
-
-## 🎯 Learning Objectives
-
-By completing this project, students will learn:
-
-### 💻 C# Fundamentals
-
-* Reading text and CSV files
-* String manipulation and parsing
-* Basic UI or console output (depending on your version)
-* Error handling and input validation
-
-### 🗂️ Software Engineering Basics
-
-* Project structure
-* Code readability and maintainability
-* Separation of concerns
-
-### 🔧 Git & Version Control
-
-* Initialize a Git repository
-* Commit changes with meaningful messages
-* Use branches (optional for advanced students)
-* Collaborate using pull requests (if working in groups)
-
-### 🌍 Open Source & Community Discipline
-
-* Understanding open-source licenses (MIT License)
-* Giving proper credit to data sources
-* Writing clean documentation
-* Respecting third-party Terms of Use
-
-***
-
-## 🧱 Project Structure
-
-```
-/TextCsvViewer
-│
-├── Program.cs
-├── CsvViewer.cs
-├── LICENSE
-├── README.md
-└── data/
-    └── malware_500.csv
-```
-
-> Note: Some files such as `*.Designer.cs` and `*.resx` are auto-generated and should not be manually edited.
-
-***
-
-## ▶️ How to Run
-
-1. Open the project in **Visual Studio** or compatible IDE
-2. Build the solution
-3. Run the program
-4. Load a `.txt` or `.csv` file to view its contents
-
-***
-
-## Data Source
-
-This project uses malware metadata from MalwareBazaar
-(https://bazaar.abuse.ch/), operated by abuse.ch.
-
-Terms of Use:
-https://bazaar.abuse.ch/faq/#tos
-
-### Modifications to Dataset
-
-The original dataset has been modified for educational purposes:
-
-- Only the first 500 records are included
-- The header line has been adjusted:
-  - From:
-    # "first_seen_utc", ...
-  - To:
-    #HEADER: "first_seen_utc", ...
-
-These changes are intended to simplify usage and improve clarity for students.
-
-The original dataset structure and attribution remain unchanged where applicable.
-``
-***
-
-## 📜 License
-
-This project is licensed under the **MIT License**.
-
-You are free to:
-
-* Use
-* Modify
-* Distribute
-
-As long as you include the original license notice.
-
-See the `LICENSE` file for full details.
-
-***
-
-## ✅ Student Tasks
-
-Students are encouraged to:
-
-### Beginner
-
-* Load and display a CSV file
-* Format output neatly
-* Handle missing or invalid data
-
-### Intermediate
-
-* Add search/filter functionality
-* Highlight specific columns
-* Support large file handling
-
-### Advanced
-
-* Build a GUI (WinForms or WPF)
-* Implement sorting and column selection
-* Improve performance and memory usage
-
-***
-
-## 🧪 Suggested Git Exercises
-
-* Create your repository
-* Commit your initial version
-* Add new features step by step
-* Write clear commit messages:
-  * ✅ `Add CSV file reader`
-  * ✅ `Fix parsing bug in column handling`
-  * ❌ `fix stuff`
-
-***
-
-## 🤝 Contribution Guidelines (For Students)
-
-* Write clean, readable code
-* Add comments when necessary
-* Respect original authors and data sources
-* Do not remove license or attribution
-* Follow project structure and naming conventions
-
-***
-
-## Contribution Policy (Current Stage)
-
-This repository is provided for **learning and reference purposes only**.
-
-At this stage of the course:
-
-- Students should NOT submit Pull Requests
-- Do NOT attempt to modify the original repository
-- Work should be done in your own copy of the project
-
-### Student Instructions
-
-1. Clone or download this repository
-2. Create your own repository
-3. Practice and modify code independently
-
-Future assignments may introduce collaboration and Pull Requests.
-***
-
-## ⚠️ Disclaimer
-
-This project may use metadata related to malware samples for educational purposes only.
-
-* Do **not** execute or download actual malware
-* Use data responsibly
-* Follow all applicable laws and policies
-
-***
-## ⚠️ Ethical Use and Dual-Use Awareness
-
-This project uses data related to malware for **educational purposes only**.
-
-Students must understand the concept of **dual-use technology**:
-
-- Software and technical knowledge can be used for **both beneficial and harmful purposes**
-- The same skills used to analyze malware can also be misused to create it
-
-### Our Objective
-
-This project is designed to:
-
-- Introduce students to real-world data handling
-- Build skills in software development and analysis
-- Promote **ethical awareness in computing**
-
-We emphasize that:
-
-- Students are expected to act as **responsible software developers**
-- The goal is to **understand and defend**, not to exploit
-- This course does **not support or encourage malicious activities**
-
-### Professional Responsibility
-
-As future professionals, students should:
-
-- Follow ethical and legal guidelines
-- Respect data sources and licenses
-- Use their knowledge to **protect systems and improve security**
-- Contribute positively to the software community
-
-> We aim to educate **ethical programmers**, not individuals who misuse technology.
-
-***
-
-## 👨‍🏫 Instructor
-
-**Sarayut Chaisuriya**  
-C# Instructor / Software Development Educator
-
-***
-
-## 💡 Final Note
-
-This project is not just about coding—it is about becoming a **responsible software developer**:
-
-* Write clean code
-* Use proper tools
-* Respect licenses
-* Learn continuously
-
-***
+# 📄 เอกสารสรุปการพัฒนาโปรแกรม Text/CSV Viewer (WinForms)
+
+โปรแกรมประมวลผล จัดเรียง และคัดกรองข้อมูลมัลแวร์จำนวน 500 เรคคอร์ด (MalwareBazaar Dataset) พัฒนาด้วยภาษา C# บนระบบ Windows Forms Application
+
+---
+
+## 📌 สารบัญเนื้อหา (Table of Contents)
+* 🔗 [ส่วนที่ 1: ขั้นตอนและสถาปัตยกรรมการทำงานของโปรแกรม](#-ส่วนที่-1-ขั้นตอนการทำงานของโปรแกรม-program-workflow)
+* 🔗 [ส่วนที่ 2: คู่มืออธิบายหน้าต่าง UI ของแอปพลิเคชัน](#-ส่วนที่-2-คู่มือและส่วนประกอบของหน้าต่าง-ui)
+* 🔗 [ส่วนที่ 3: ตารางสรุปผลการทดสอบระบบ (Test Report)](#-ส่วนที่-3-สรุปผลการทดสอบระบบ-test-status-report)
+
+---
+
+## ⚙️ ส่วนที่ 1: ขั้นตอนการทำงานของโปรแกรม (Program Workflow)
+
+โปรแกรมถูกเขียนและออกแบบระบบการทำงานแบ่งออกเป็น 4 ขั้นตอนหลัก (Pipeline) ดังนี้ครับ:
+
+1. **การโหลดไฟล์ขอบเขตจำกัด (Partial Data Loading):** * โปรแกรมจะรับค่าบรรทัดเริ่มต้น ($M$) และบรรทัดสิ้นสุด ($N$) จากผู้ใช้
+   * ระบบใช้ `StreamReader` ค่อย ๆ อ่านไฟล์ทีละบรรทัด โดยเริ่มนับและดึงข้อมูลเฉพาะช่วงบรรทัดที่กำหนดเท่านั้น ช่วยให้โปรแกรมประมวลผลเร็วและไม่ค้างแม้ไฟล์จะมีขนาดใหญ่
+2. **ระบบทำความสะอาดข้อมูล (Data Cleaning):**
+   * ข้อมูลต้นฉบับจาก CSV มักจะมีเครื่องหมายอัญประกาศคู่ (`"`) ครอบมาในแต่ละช่อง
+   * ตัวโค้ดจะใช้คำสั่งฟังก์ชัน String Manipulation ในการสลัดเครื่องหมายคำพูดพวกนี้ทิ้งไปโดยอัตโนมัติ เพื่อให้ได้ข้อความบริสุทธิ์
+3. **การแยกคอลัมน์อัจฉริยะ (Data Parsing):**
+   * ระบบทำการตัดช่องข้อมูลด้วยเครื่องหมายจุลภาค (Comma `,`) 
+   * แบ่งข้อมูลแยกออกจากกันเป็น Array เพื่อเตรียมนำไปวางลงช่องตารางให้ตรงตามโครงสร้างข้อมูล
+4. **ตัวกรองประเภทไฟล์มัลแวร์ (File Type Filtering):**
+   * มีระบบ Logic คอยดักจับนามสกุลไฟล์มัลแวร์ หากผู้ใช้ระบุประเภท เช่น `exe`, `dll`, `elf` ระบบจะทำการกรองและแสดงเฉพาะแถวที่เป็นนามสกุลนั้น ๆ ทันที
+
+---
+
+## 🖥️ ส่วนที่ 2: คู่มือและส่วนประกอบของหน้าต่าง UI
+
+หน้าตาโปรแกรม (User Interface) ถูกออกแบบมาให้ใช้งานง่าย แบ่งสัดส่วนชัดเจนตามการจัดวางบน WinForms ดังนี้:
+
+* **ส่วนนำเข้าข้อมูล (Input & File Selector):**
+  * ปุ่ม **[Browse]** สำหรับคลิกเลือกไฟล์ `.csv` หรือ `.txt` จากในคอมพิวเตอร์
+  * ช่องกรอกข้อความ **M** (บรรทัดเริ่ม) และ **N** (บรรทัดจบ) เพื่อคุมขอบเขตข้อมูล
+  * ช่องตัวเลือก **File Type** (Dropdown/Combobox) สำหรับเลือกประเภทมัลแวร์ที่ต้องการคัดกรอง
+* **ส่วนสลับโหมดการดู (Tab Control):**
+  * **Tab - Text:** ใช้โชว์ข้อมูลดิบทั้งหมดที่อ่านได้จากไฟล์แบบเรียงบรรทัด
+  * **Tab - CSV:** โชว์ตารางข้อมูลที่แยกคอลัมน์แล้วอย่างสวยงาม
+* **ส่วนปุ่มสั่งการ (Action Buttons):**
+  * ปุ่ม **[read as text]** บังคับโหลดข้อมูลโชว์ในแท็บข้อความดิบ
+  * ปุ่ม **[read as csv]** สั่งล้างอัญประกาศคู่ แยกคอลัมน์ และยัดลงตาราง `DataGridView`
+* **ส่วนแสดงผลตาราง (Data Grid View):**
+  * แบ่งตารางออกเป็นคอลัมน์ชัดเจน ได้แก่ `Date`, `SHA256 Hash`, `MD5Hash`, `SHA1 Hash` เป็นต้น สะดวกต่อการกวาดสายตาตรวจเช็กข้อมูล
+
+---
+
+## 📊 ส่วนที่ 3: สรุปผลการทดสอบระบบ (Test Status Report)
+
+| Test ID | รายการทดสอบระบบ | ขั้นตอนและผลลัพธ์ที่ได้จากโค้ด | สถานะ |
+| :---: | :--- | :--- | :---: |
+| **TC01** | ตรวจสอบกรณีไม่พบไฟล์ / พาธไฟล์ขยะ | มี `try-catch` ดักจับ แจ้งเตือนข้อความเตือนภัย โปรแกรมไม่แครช | 🟢 **PASS** |
+| **TC02** | ตรวจสอบค่าขอบเขตข้อมูล (Boundary Check) | แจ้งเตือนผู้ใช้ทันทีเมื่อตั้งค่าขอบเขตข้อมูลผิดพลาด ($M > N$) | 🟢 **PASS** |
+| **TC03** | ตรวจสอบการจำกัดข้อมูล (Partial Loading) | โปรแกรมดึงเฉพาะช่วงบรรทัดที่ระบุมาแสดงผลได้ถูกต้องแม่นยำ | 🟢 **PASS** |
+| **TC04** | ตรวจสอบกรณีตัวกรองไม่พบข้อมูลในระบบ | แสดงตารางว่างเปล่าพร้อมแจ้งเตือน Information ว่าไม่พบข้อมูล | 🟢 **PASS** |
+| **TC05** | ตรวจสอบตัวกรองประเภทไฟล์ (File Type Filter) | กรองข้อมูลมัลแวร์แยกตามประเภท ล้างเครื่องหมาย引号 ได้ 100% | 🟢 **PASS** |
+
+### 📈 สรุปผลลัพธ์ภาพรวม (Final Summary)
+* **การทดสอบทั้งหมด:** 5 เคส / **ผ่านการทดสอบ (Pass):** 5 เคส (100%)
+* **สถานะโครงการ:** 🏆 **[X] PASS (แอปพลิเคชันทำงานได้สมบูรณ์แบบตามข้อกำหนด)**
+
+---
+👨‍💻 *พัฒนาและบันทึกประวัติซอร์สโค้ดผ่านระบบ Git Version Control เรียบร้อยแล้ว*

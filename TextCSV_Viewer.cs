@@ -88,7 +88,7 @@ namespace FileProcessing
                             strValues_arr[i] = strValues_arr[i].Trim().Trim('"');
                         }
 
-                        // 🔥 ไฮไลท์แก้บั๊ก: สร้างหัวตาราง (Header) อัตโนมัติ ครบทุกคอลัมน์ที่มีอยู่ในไฟล์จริง!
+                        //  ไฮไลท์แก้บั๊ก: สร้างหัวตาราง (Header) อัตโนมัติ ครบทุกคอลัมน์ที่มีอยู่ในไฟล์จริง!
                         if (!bHeaderRead)
                         {
                             foreach (string strHeader in strValues_arr)
